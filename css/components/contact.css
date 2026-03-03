@@ -1,0 +1,235 @@
+.contact-section {
+    background-color: var(--bg-secondary);
+}
+
+.contact-title {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 32px;
+}
+
+.contact-card {
+    background: white;
+    border: 1px solid var(--border-subtle);
+    border-radius: 32px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    padding: 64px;
+}
+
+.contact-blur-decor {
+    position: absolute;
+    width: 256px;
+    height: 256px;
+    background: rgba(230, 230, 250, 0.4);
+    filter: blur(48px);
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    z-index: 0;
+    animation: rotate-slow 20s linear infinite;
+}
+
+.decor-top-right {
+    top: -80px;
+    right: -80px;
+}
+
+.decor-bottom-left {
+    bottom: -80px;
+    left: -80px;
+}
+
+.contact-card-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: 64px;
+}
+
+@media (max-width: 1024px) {
+    .contact-card {
+        padding: 48px 32px;
+    }
+
+    .contact-card-inner {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 640px) {
+    .contact-card {
+        padding: 32px 24px;
+    }
+}
+
+/* Contact left */
+.contact-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact-heading {
+    font-size: 48px;
+    line-height: 1;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.contact-desc {
+    font-size: 18px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 48px;
+}
+
+.contact-methods {
+    border: 1px solid var(--bg-lavender);
+    border-radius: 8px;
+    padding: 1px;
+    background: white;
+}
+
+.contact-method-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+}
+
+.border-bottom {
+    border-bottom: 1px solid rgba(230, 230, 250, 0.5);
+}
+
+.method-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    background: rgba(230, 230, 250, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6366f1;
+    font-size: 20px;
+}
+
+.method-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.method-label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+    letter-spacing: 0.3px;
+}
+
+.method-value {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+/* Contact right */
+.contact-form-wrapper {
+    flex: 1;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-row {
+    display: flex;
+    gap: 16px;
+}
+
+@media (max-width: 640px) {
+    .form-row {
+        flex-direction: column;
+    }
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+    position: relative;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-accent);
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    background-color: var(--bg-neutral-light);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 16px;
+    color: var(--text-primary);
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #94a3b8;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #cbd5e1;
+    box-shadow: 0 0 0 3px rgba(230, 230, 250, 0.6);
+    transform: translateY(-2px);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper select {
+    appearance: none;
+    padding-right: 48px;
+    cursor: pointer;
+}
+
+.select-icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-tertiary);
+    pointer-events: none;
+}
+
+.btn-submit {
+    background: var(--bg-lavender);
+    color: var(--text-accent);
+    border-radius: 8px;
+    padding: 16px;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+.btn-submit:hover {
+    background: #d8d8f6;
+}
