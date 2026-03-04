@@ -2,11 +2,7 @@
     background-color: var(--bg-secondary);
 }
 
-.contact-title {
-    font-size: 48px;
-    font-weight: 800;
-    margin-bottom: 32px;
-}
+
 
 .contact-card {
     background: white;
@@ -15,7 +11,7 @@
     position: relative;
     overflow: hidden;
     box-shadow: var(--shadow-lg);
-    padding: 64px;
+    padding: 32px 48px;
 }
 
 .contact-blur-decor {
@@ -71,17 +67,17 @@
 }
 
 .contact-heading {
-    font-size: 48px;
-    line-height: 1;
+    font-size: 36px;
+    line-height: 1.1;
     color: var(--text-primary);
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
 
 .contact-desc {
-    font-size: 18px;
+    font-size: 16px;
     color: var(--text-secondary);
-    line-height: 1.5;
-    margin-bottom: 48px;
+    line-height: 1.4;
+    margin-bottom: 24px;
 }
 
 .contact-methods {
@@ -141,7 +137,7 @@
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
 }
 
 .form-row {
@@ -198,7 +194,7 @@ textarea:focus {
 
 textarea {
     resize: vertical;
-    min-height: 120px;
+    min-height: 80px;
 }
 
 .select-wrapper {

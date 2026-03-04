@@ -1,24 +1,94 @@
-.page-wrapper {
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+/* Clean Scroll Snapping for All Browsers */
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
 }
 
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Base section rules */
+.section-wrapper {
+    min-height: 100vh;
+    min-height: 100dvh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    position: relative;
+    padding: 80px 0;
+}
+
+/* Base container rules */
 .section-container {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 96px 160px;
+    padding: 0 160px;
     width: 100%;
 }
 
+/* Specialized Contact & Footer rules for the last snap */
+.contact-section.section-wrapper {
+    height: 100vh;
+    height: 100dvh;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.contact-section .section-container {
+    padding-top: 32px;
+    padding-bottom: 16px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.site-footer {
+    width: 100%;
+    background: white;
+    border-top: 1px solid var(--border-subtle);
+    flex-shrink: 0;
+}
+
+.site-footer .footer-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 160px;
+    width: 100%;
+}
+
+/* Responsive adjustments */
 @media (max-width: 1024px) {
-    .section-container {
-        padding: 80px 48px;
+
+    .section-container,
+    .site-footer .footer-inner {
+        padding: 0 48px;
     }
 }
 
 @media (max-width: 768px) {
-    .section-container {
-        padding: 64px 24px;
+
+    .section-container,
+    .site-footer .footer-inner {
+        padding: 0 24px;
+    }
+
+    .section-wrapper {
+        padding: 60px 0;
+        scroll-snap-align: none;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .contact-section.section-wrapper {
+        height: auto;
+        justify-content: flex-start;
     }
 }

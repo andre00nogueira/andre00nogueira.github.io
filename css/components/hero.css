@@ -1,4 +1,4 @@
-.hero-section {
+.hero-section>.section-container {
     display: flex;
     gap: 48px;
     align-items: center;
@@ -235,6 +235,11 @@
     border-radius: 32px;
     overflow: hidden;
     z-index: 2;
+    /* Fix Safari border-radius clipping bug during transitions */
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    mask-image: radial-gradient(white, black);
+    isolation: isolate;
+    transform: translateZ(0);
     transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s ease;
 }
 
@@ -330,7 +335,7 @@
 }
 
 @media (max-width: 768px) {
-    .hero-section {
+    .hero-section>.section-container {
         flex-direction: column;
     }
 
