@@ -23,4 +23,16 @@ document.addEventListener("DOMContentLoaded", () => {
     revealElements.forEach(el => {
         revealObserver.observe(el);
     });
+    // 2. Snapping Stability Fix for Chrome
+    // Re-calculates snap targets on window resize to prevent landing half-way between sections
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            // No direct API to "refresh" snap, but forcing a tiny scroll top-off often triggers browser re-calc
+            const currentPosition = window.scrollY;
+            window.scrollTo(0, currentPosition + 1);
+            window.scrollTo(0, currentPosition);
+        }, 300);
+    });
 });

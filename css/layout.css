@@ -1,7 +1,10 @@
-/* Clean Scroll Snapping for All Browsers */
+/* Cross-Browser Optimized Scroll Snapping */
 html {
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
+    height: 100%;
+    /* Standard fix for consistent snapping targets */
+    scroll-padding-top: 0;
 }
 
 body {
@@ -9,6 +12,8 @@ body {
     color: var(--text-primary);
     line-height: 1.5;
     margin: 0;
+    -webkit-overflow-scrolling: touch;
+    /* Kinetic scroll for iOS */
 }
 
 /* Base section rules */
@@ -25,11 +30,18 @@ body {
     padding: 80px 0;
 }
 
-/* Base container rules */
+/* Ensure no margins break the snap points */
+section,
+main {
+    margin: 0 !important;
+}
+
+/* Base container rules - more fluid for better responsiveness */
 .section-container {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 160px;
+    padding: 0 max(24px, 12vw);
+    /* Fluid padding for ultra-wide screens */
     width: 100%;
 }
 
@@ -48,6 +60,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow-y: auto;
+    /* Allow internal scroll if content is too big for high-res cards on short viewports */
 }
 
 .site-footer {
@@ -60,11 +74,22 @@ body {
 .site-footer .footer-inner {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 160px;
+    padding: 16px max(24px, 12vw);
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* Responsive adjustments */
+@media (max-width: 1440px) {
+
+    .section-container,
+    .site-footer .footer-inner {
+        padding: 0 80px;
+    }
+}
+
 @media (max-width: 1024px) {
 
     .section-container,
@@ -83,6 +108,7 @@ body {
     .section-wrapper {
         padding: 60px 0;
         scroll-snap-align: none;
+        /* Disable snapping on mobile for smoother reading of varied heights */
         height: auto;
         min-height: 100vh;
     }
@@ -91,4 +117,9 @@ body {
         height: auto;
         justify-content: flex-start;
     }
+}
+
+/* Bug fix for Chrome: Ensure snap containers don't have hidden overflows that break the top-level snap */
+.page-wrapper {
+    overflow: visible;
 }

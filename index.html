@@ -20,21 +20,38 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://andrenogueira.dev/">
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph tags for social sharing -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://andrenogueira.dev/">
-    <meta property="og:title" content="André Nogueira - Mobile Developer | Kotlin & iOS">
+    <meta property="og:title" content="André Nogueira - Expert Mobile Developer | Kotlin, Android & iOS">
     <meta property="og:description"
-        content="Portfolio of André Nogueira, an experienced mobile developer specializing in Kotlin, clean architecture, Android, and cross-platform solutions.">
+        content="Professional portfolio of André Nogueira. specializing in high-performance Android & iOS apps, Clean Architecture, and Jetpack Compose. Download my CV or get a quote.">
     <meta property="og:image" content="https://andrenogueira.dev/assets/profile.jpg">
 
-    <!-- Twitter -->
+    <!-- Twitter tags -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://andrenogueira.dev/">
     <meta property="twitter:title" content="André Nogueira - Mobile Developer">
     <meta property="twitter:description"
-        content="Portfolio of André Nogueira, an experienced mobile developer specializing in Kotlin, clean architecture, Android, and cross-platform solutions.">
+        content="Expert Android development with Kotlin & Jetpack Compose. Building scalable architectures and beautiful user experiences.">
     <meta property="twitter:image" content="https://andrenogueira.dev/assets/profile.jpg">
+
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "André Nogueira",
+      "jobTitle": "Mobile Developer",
+      "url": "https://andrenogueira.dev",
+      "sameAs": [
+        "https://github.com/andre00nogueira",
+        "https://medium.com/@andrenogueira.dev"
+      ],
+      "knowsAbout": ["Android Development", "Kotlin", "Jetpack Compose", "Clean Architecture", "iOS Development", "Swift"],
+      "description": "Experienced mobile developer specializing in high-performance native applications and clean architecture."
+    }
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,7 +59,7 @@
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
         rel="stylesheet">
 
-    <!-- Phosphor Icons for sharp, modern icons used in the design -->
+    <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
 
     <link rel="stylesheet" href="css/main.css">
@@ -77,11 +94,11 @@
                     <div class="trust-indicator">
                         <div class="client-avatars">
                             <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&h=100"
-                                alt="Client 1" class="avatar-ring">
+                                alt="Satisfied client avatar" class="avatar-ring">
                             <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=100&h=100"
-                                alt="Client 2" class="avatar-ring">
+                                alt="Professional partner avatar" class="avatar-ring">
                             <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&h=100"
-                                alt="Client 3" class="avatar-ring">
+                                alt="Client testimonial avatar" class="avatar-ring">
                         </div>
                         <div class="stars-container">
                             <div class="stars">
@@ -111,7 +128,7 @@
                             </div>
                             <div class="experience-details">
                                 <span class="experience-label">Experience</span>
-                                <span class="experience-years">5+ Years</span>
+                                <span class="experience-years">4+ Years</span>
                             </div>
                         </div>
                     </div>
@@ -128,17 +145,12 @@
                 </div>
 
                 <div class="about-content reveal delay-100">
-                    <p>I am a passionate Mobile Developer with over 7 years of experience in crafting high-quality
-                        Android
-                        applications using Kotlin. My journey started with a fascination for how software interacts with
-                        hardware, leading me to specialize in mobile ecosystems where performance and user experience
-                        are
-                        paramount.</p>
-                    <p>Currently, I focus on building scalable, clean architecture apps and contributing to open-source
-                        projects. I believe in continuous learning and often write about mobile development best
-                        practices
-                        to share knowledge with the community. When I'm not coding, you can find me exploring new tech
-                        trends or hiking in nature.</p>
+                    <p>I’m a Mobile Developer with over 4 years of experience specializing in native Android apps with
+                        Kotlin and Jetpack Compose. I focus on building scalable, modern architectures that balance
+                        high-end performance with a seamless user experience.</p>
+                    <p>Currently working as a freelancer, I collaborate with businesses to bring their mobile visions to
+                        life. With deep expertise in the Health & Fitness sector, I’ve delivered everything from complex
+                        B2C platforms to specialized hardware integrations using Bluetooth and MQTT.</p>
                 </div>
             </div>
         </section>
@@ -153,8 +165,8 @@
                         future
                         of native development.</p>
                     <a href="https://medium.com/@andrenogueira.dev" target="_blank" rel="noopener noreferrer"
-                        class="btn-text" style="margin-top: 16px;">
-                        See all <i class="ph ph-arrow-right"></i>
+                        class="btn-text" style="margin-top: 16px;" aria-label="Read more articles on Medium">
+                        See all <i class="ph ph-arrow-right" aria-hidden="true"></i>
                     </a>
                 </div>
 
@@ -212,53 +224,62 @@
                     <p class="testimonials-subtitle">Don't just take my word for it. Here is what people I've worked
                         with have to say.</p>
                 </div>
-            </div>
 
-            <div class="testimonials-slider reveal delay-200">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <div class="stars">
-                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
-                                class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
-                                class="ph-fill ph-star"></i>
-                        </div>
-                        <h4 style="font-size: 18px; margin: 8px 0 0; color: var(--text-primary);">Android App – Barcode
-                            Scanning with Photo Upload</h4>
-                        <p class="testimonial-quote">"Andre completed the project ahead of schedule and exceeded all
-                            expectations. The app works flawlessly, the UI is clean and intuitive, and the S3
-                            integration is perfectly structured. Communication was clear and consistent throughout the
-                            project. Andre understood our vision from day one, offered smart technical suggestions, and
-                            responded promptly to every request and revision. The admin panel and security features were
-                            implemented exactly as needed. Highly recommended for any mobile development project—will
-                            absolutely work together again! Thank you for an outstanding job."</p>
-                        <button class="see-more-btn" onclick="toggleReview(this)">See more</button>
-                        <div class="testimonial-author">
-                            <h5>Ahmed Abdelmoneim</h5>
-                            <span>Central Rx Group Inc.</span>
+                <div class="testimonials-slider reveal delay-200">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="stars">
+                                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                    class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                    class="ph-fill ph-star"></i>
+                            </div>
+                            <h4 style="font-size: 18px; margin: 8px 0 0; color: var(--text-primary);">Android App –
+                                Barcode
+                                Scanning with Photo Upload</h4>
+                            <p class="testimonial-quote">"Andre completed the project ahead of schedule and exceeded all
+                                expectations. The app works flawlessly, the UI is clean and intuitive, and the S3
+                                integration is perfectly structured. Communication was clear and consistent throughout
+                                the
+                                project. Andre understood our vision from day one, offered smart technical suggestions,
+                                and
+                                responded promptly to every request and revision. The admin panel and security features
+                                were
+                                implemented exactly as needed. Highly recommended for any mobile development
+                                project—will
+                                absolutely work together again! Thank you for an outstanding job."</p>
+                            <button class="see-more-btn" onclick="toggleReview(this)">See more</button>
+                            <div class="testimonial-author">
+                                <h5>Ahmed Abdelmoneim</h5>
+                                <span>Central Rx Group Inc.</span>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Testimonial 2 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <div class="stars">
-                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
-                                class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
-                                class="ph-fill ph-star"></i>
-                        </div>
-                        <h4 style="font-size: 18px; margin: 8px 0 0; color: var(--text-primary);">Port an iOS Native app
-                            to Android Native</h4>
-                        <p class="testimonial-quote">"The gig was to take an iOS app and rewrite it in Android. Andre
-                            was excellent to work with and delivered in a timely manner --he even provided feedback and
-                            promptly worked on features and bug fixes that were unexpected due to the nature of Android
-                            development and all the phone manufacturers involved with that. I definitely recommend
-                            Andre, and would work with him again!"</p>
-                        <button class="see-more-btn" onclick="toggleReview(this)">See more</button>
-                        <div class="testimonial-author">
-                            <h5>Lee Brannan</h5>
-                            <span>10-20.io</span>
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="stars">
+                                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                    class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                    class="ph-fill ph-star"></i>
+                            </div>
+                            <h4 style="font-size: 18px; margin: 8px 0 0; color: var(--text-primary);">Port an iOS Native
+                                app
+                                to Android Native</h4>
+                            <p class="testimonial-quote">"The gig was to take an iOS app and rewrite it in Android.
+                                Andre
+                                was excellent to work with and delivered in a timely manner --he even provided feedback
+                                and
+                                promptly worked on features and bug fixes that were unexpected due to the nature of
+                                Android
+                                development and all the phone manufacturers involved with that. I definitely recommend
+                                Andre, and would work with him again!"</p>
+                            <button class="see-more-btn" onclick="toggleReview(this)">See more</button>
+                            <div class="testimonial-author">
+                                <h5>Lee Brannan</h5>
+                                <span>10-20.io</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -337,9 +358,11 @@
                     </nav>
                     <div class="footer-social">
                         <a href="https://github.com/andre00nogueira" target="_blank" rel="noopener noreferrer"
-                            class="social-link" title="GitHub"><i class="ph ph-github-logo"></i></a>
+                            class="social-link" title="GitHub" aria-label="Visit André Nogueira on GitHub"><i
+                                class="ph ph-github-logo"></i></a>
                         <a href="https://medium.com/@andrenogueira.dev" target="_blank" rel="noopener noreferrer"
-                            class="social-link" title="Medium"><i class="ph ph-medium-logo"></i></a>
+                            class="social-link" title="Medium" aria-label="Read André Nogueira's articles on Medium"><i
+                                class="ph ph-medium-logo"></i></a>
                     </div>
                 </div>
             </footer>
